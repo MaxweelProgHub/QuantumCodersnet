@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Landing Page para a Movitel">
+    <title>Inscrição Q-Code</title>
+    <!-- Adicionando Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Geral */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            transition: 0.6s ease-in-out;
+        }
+
+        /* Container */
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Cabeçalho */
+        .header {
+            background: #0066cc;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            transition: background-color 0.5s ease;
+        }
+
+        .header h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .header p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .cta-btn {
+            background-color: #ff6600;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: #ff4d00;
+            transform: scale(1.1);
+        }
+
+        /* Seções */
+        .features {
+            background-color: #fff;
+            padding: 50px 0;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .features.show {
+            opacity: 1;
+        }
+
+        .features h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .feature-box {
+            display: flex;
+            justify-content: space-around;
+            transition: transform 0.3s ease;
+        }
+
+        .feature {
+            width: 30%;
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            font-size: 16px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: #0066cc;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-section:hover {
+            background-color: #0055a5;
+        }
+
+        .cta-section input,
+        .cta-section button {
+            padding: 10px;
+            font-size: 18px;
+            margin: 10px 0;
+            width: 80%;
+            max-width: 400px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .cta-section input {
+            margin-bottom: 20px;
+        }
+
+        .cta-section button {
+            background-color: #ff6600;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-section button:hover {
+            background-color: #ff4d00;
+        }
+
+        /* Rodapé */
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .footer p {
+            font-size: 14px;
+        }
+
+        /* Efeito de transição suave para o carregamento */
+        .fade-in {
+            animation: fadeIn 2s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Bem-vindo, Faça sua inscrição Hoje!</h1>
+            <p>Desbloqueie uma nova experiencia incríveil e ganhe prêmios exclusivos!</p>
+            <a href="#form" class="cta-btn">Cadastre-se Agora</a>
+        </div>
+    </header>
+
+    <section class="features fade-in">
+        <div class="container">
+            <h2>O que você ganha Ao se Inscrever?</h2>
+            <div class="feature-box">
+                <div class="feature">
+                    <h3>Aprendizagem</h3>
+                    <p>Aproveite o melhor das Aulas de Modificações e Crack's de App</p>
+                </div>
+                <div class="feature">
+                    <h3>Prêmios Instantâneos</h3>
+                    <p>Participe e ganhe recompensas incríveis. (trabalho e recompensa)</p>
+                </div>
+                <div class="feature">
+                    <h3>Acesso VIP</h3>
+                    <p>Seja um membro VIP e receba ofertas personalizadas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section" id="form">
+        <div class="container">
+            <h2>Cadastre-se para Participar</h2>
+            <p>Preencha o formulário abaixo e aproveite as promoções exclusivas da Movitel.</p>
+            <form action="submit_form.php" method="POST">
+                <input type="text" name="name" placeholder="Seu Nome" required>
+                <input type="number" name="email" placeholder="Seu Numero(apenas M-pesa)" required>
+                <button type="submit" class="cta-btn">Cadastre-se</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="day"></span> QuantumCoders. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Adicionando o JS do Bootstrap e jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Adiciona a classe 'show' para ativar a animação fade-in após o carregamento
+        window.onload = function() {
+            document.querySelector('.features').classList.add('show');
+        };
+
+        const year = new Date().getFullYear();
+        document.getElementById('day').innerHTML = year;
+    </script>
+</body>
+</html>
