@@ -221,6 +221,7 @@ body {
     font-family: 'poppins';
     cursor: pointer;
     border-radius: 5px;
+    z-index: 999;
 }
 
 .open-side-bar:hover {
